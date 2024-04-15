@@ -26,10 +26,10 @@
             </div> <br>
               
           <h2>Naturopata <br> Kátia Cristina</h2>
-          <p class="cro">CRO9494</p>
+          <!--<p class="cro">CRO9494</p>-->
           <br>
           <p>Anamnese</p> <br>
-          
+                   
           <form action="https://formsubmit.co/9ec83d3ee01522185f0387f9b90284cd" id="form" method="POST" data-form target="_blank">
             <div class="input-group">            
               <label for="name">Nome Completo:</label><br>
@@ -38,25 +38,62 @@
               
             </div> <br>
             <div class="input-group"> 
-            <label for="mensagem">Queixa principal:</label> <br>
-            <textarea name="Queixa principal" id="mensagem" cols="105" rows="10"></textarea>
+            <label for="mensagem">O que você está sentindo?</label> <br>
+            <textarea name="O que você está sentindo? id="mensagem" cols="105" rows="10" required></textarea>
           </div> <br>
+          <h3 style="text-align: center;">Espessão</h3>
+            <div class="input-group">            
+              <label for="lingua">Língua:</label><br>
+              <input type="text" id="lingua" name="lingua"
+              placeholder="NÃO PREENCHER" > </div><br>
+              <div class="input-group">            
+              <label for="pulso">Pulso:</label><br>
+              <input type="text" id="pulso" name="pulso"
+              placeholder="NÃO PREENCHER" >
+            </div> <br>
+            <div class="input-group">            
+              <label for="iris">Íris:</label><br>
+              <input type="text" id="iris" name="iris"
+              placeholder="NÃO PREENCHER" > </div><br>
+            <div class="input-group">            
+              <label for="idade">Qual a sua idade:</label><br>
+              <input type="text" id="Idade" name="idade"
+              placeholder="Digite a sua idade" required>
               
-              <tbody>  
+            </div> <br>
+            <div class="input-group">            
+              <label for="peso">Qual o seu peso:</label><br>
+              <input type="text" id="peso" name="peso"
+              placeholder="Digite o seu peso" required>
+              
+            </div> <br>
+            <div class="input-group">            
+              <label for="altura">Qual a sua altura:</label><br>
+              <input type="text" id="altura" name="altura"
+              placeholder="Digite a sua altura" required>
+              
+            </div> <br>
+            <div class="input-group">            
+              <label for="pressao">Pressão Arterial:</label><br>
+              <input type="text" id="pressao" name="Pressão Arterial"
+              placeholder="Digite a Pressão Arterial" required>
+              
+            </div> <br>
+             
+            <tbody>  
                 <div class="input-group">   
                 <tr role="row" data-row-index="0">
-                  <td>Está em tratamento médico?</td><br><td data-id="1"><input name="Está em tratamento médico?" id="chkSelecionaInsere0" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                   <td data-id="1"><input name="Está em tratamento médico?" id="chkSelecionaExcluir0" type="radio" value="Não" required/>&nbsp;Não</td>
-                 <br><label for="text">Se Sim, Qual tratamento médico?</label>
-                 <input type="text" id="text" name="Se sim, Qual tratamento médico?">
-                        </tr>
+                  <td>Tem diabete?</td><br><td data-id="1"><input name="Tem diabete?" id="chkSelecionaInsere0" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                   <td data-id="1"><input name="Tem diabete?" id="chkSelecionaExcluir0" type="radio" value="Não" required/>&nbsp;Não</td>
+                 <br></tr>
                       </div> <br>
               <div class="input-group"> 
                <tr role="row" data-row-index="0">
-                 <td>Já se submeteu a anestesia geral?</td>
-                <br> <td data-id="2"><input name="Já se submeteu a anestesia geral?" id="chkSelecionaInsere1" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                   <td data-id="2"><input name="Já se submeteu a anestesia geral?" id="chkSelecionaExcluir1" type="radio" value="Não" required/>&nbsp;Não</td>
-                   
+                 <td>Toma alguma medicação?</td>
+                <br> <td data-id="2"><input name="Toma alguma medicação?" id="chkSelecionaInsere1" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                   <td data-id="2"><input name="Toma alguma medicação?" id="chkSelecionaExcluir1" type="radio" value="Não" required/>&nbsp;Não</td>
+                   <br><label for="text">Se Sim, Qual medicação?</label>
+                 <input type="text" id="text" name="Se sim, Qual medicação?">
                </tr>
               </div> <br>
                <div class="input-group"> 
@@ -71,151 +108,130 @@
               </div> <br>
                <div class="input-group"> 
                <tr role="row" data-row-index="0">
-                <td>Já se submeteu a anestesia odontológica?</td>
-               <br> <td data-id="4"><input name="Já se submeteu a anestesia odontológica?" id="chkSelecionaInsere3" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                  <td data-id="4"><input name="Já se submeteu a anestesia odontológica?" id="chkSelecionaExcluir3" type="radio" value="Não" required/>&nbsp;Não</td>
+                <td>Tem filhos?</td>
+               <br> <td data-id="4"><input name="Tem filhos?" id="chkSelecionaInsere3" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                  <td data-id="4"><input name="Tem filhos?" id="chkSelecionaExcluir3" type="radio" value="Não" required/>&nbsp;Não</td>
                   
               </tr> 
             </div> <br>
               <div class="input-group"> 
               <tr role="row" data-row-index="0">
-                <td>Já se submeteu a alguma reação alérgica durante a anestesia?</td>
-               <br> <td data-id="5"><input name="Já se submeteu a alguma reação alérgica durante a anestesia?" id="chkSelecionaInsere4" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                  <td data-id="5"><input name="Já se submeteu a alguma reação alérgica durante a anestesia?" id="chkSelecionaExcluir4" type="radio" value="Não" required/>&nbsp;Não</td>
-                  
+                <td>Está dormindo bem?</td>
+               <br> <td data-id="5"><input name="Está dormindo bem?" id="chkSelecionaInsere4" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                  <td data-id="5"><input name="Está dormindo bem?" id="chkSelecionaExcluir4" type="radio" value="Não" required/>&nbsp;Não</td>
+                  <br><label for="text">Como está o sono?</label>
+                <input type="text" id="text" name="Como está o sono?">
               </tr>  
             </div> <br>
               <div class="input-group">                                                                                                             
               <tr role="row" data-row-index="0">
-                <td>Possui alergia a algum tipo de medicamento?</td>
+                <td>Dorme cêdo?</td>
               </tr>
-               <br> <td data-id="6"><input name="Possui alergia a algum tipo de medicamento?" id="chkSelecionaInsere5" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                  <td data-id="6"><input name="Possui alergia a algum tipo de medicamento?" id="chkSelecionaExcluir5" type="radio" value="Não" required/>&nbsp;Não</td>
-                  <br><label for="text">Se Sim, Qual?</label>
-                <input type="text" id="text" name="Se Sim, qual medicamento possui alergia?">
+               <br> <td data-id="6"><input name="Dorme cêdo?" id="chkSelecionaInsere5" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                  <td data-id="6"><input name="Dorme cêdo?" id="chkSelecionaExcluir5" type="radio" value="Não" required/>&nbsp;Não</td>
+                  <br><label for="text">Que horas habitualmente você dorme?</label>
+                <input type="text" id="text" name="Que horas habitualmente você dorme?">
               </tr> 
             </div> <br>
               <div class="input-group"> 
               <tr role="row" data-row-index="0">
-                <td>Possui alergia a algum tipo de alimento?</td>
+                <td>Você se alimenta antes de dormir?</td>
               </tr>
-               <br> <td data-id="7"><input name="Possui alergia a algum tipo de alimento?" id="chkSelecionaInsere6" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                  <td data-id="7"><input name="Possui alergia a algum tipo de alimento?" id="chkSelecionaExcluir6" type="radio" value="Não" required/>&nbsp;Não</td>
-                  <br><label for="text">Se Sim, Qual?</label>
-                <input type="text" id="text" name="Se Sim, qual tipo de alimento possui alergia?">
+               <br> <td data-id="7"><input name="Você se alimenta antes de dormir?" id="chkSelecionaInsere6" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                  <td data-id="7"><input name="Você se alimenta antes de dormir?" id="chkSelecionaExcluir6" type="radio" value="Não" required/>&nbsp;Não</td>
+                  <br><label for="text">Se Sim, qual tipo de alimento?</label>
+                <input type="text" id="text" name="Se Sim, qual tipo de alimento?">
               </tr> 
             </div> <br>
               <div class="input-group"> 
               <tr role="row" data-row-index="0">
-                <td>Possui alguma alteração cardiológica?</td>
-               <br> <td data-id="8"><input name="Possui alguma alteração cardiológica?" id="chkSelecionaInsere7" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                  <td data-id="8"><input name="Possui alguma alteração cardiológica?" id="chkSelecionaExcluir7" type="radio" value="Não" required/>&nbsp;Não</td>
+                <td>Senti prazer em algum tipo de comida?</td>
+               <br> <td data-id="8"><input name="Senti prazer em algum tipo de comida?" id="chkSelecionaInsere7" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                  <td data-id="8"><input name="Senti prazer em algum tipo de comida?" id="chkSelecionaExcluir7" type="radio" value="Não" required/>&nbsp;Não</td>
+                  <br><label for="text">Se Sim, qual a comida que te dá prazer?</label>
+                <input type="text" id="text" name="Se Sim, qual a comida que te dá prazer?">
                   </tr> 
                 </div> <br> 
                   <div class="input-group"> 
                   <tr role="row" data-row-index="0">
-                    <td>Toma algum medicamento para pressão arterial?</td>
+                    <td>Acorda durante a madrugada?</td>
                   </tr>
-                   <br> <td data-id="9"><input name="Toma algum medicamento para pressão arterial?" id="chkSelecionaInsere8" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                      <td data-id="9"><input name="Toma algum medicamento para pressão arterial?" id="chkSelecionaExcluir8" type="radio" value="Não" required/>&nbsp;Não</td>
-                      <br><label for="text">Se Sim, Qual?</label>
-                    <input type="text" id="text" name="Se Sim, qual medicamento toma para pressão arterial?">
+                   <br> <td data-id="9"><input name="Acorda durante a madrugada?" id="chkSelecionaInsere8" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                      <td data-id="9"><input name="Acorda durante a madrugada?" id="chkSelecionaExcluir8" type="radio" value="Não" required/>&nbsp;Não</td>
+                      
                   </tr>  
                 </div> <br>
                   <div class="input-group"> 
                   <tr role="row" data-row-index="0">
-                    <td>Possui alguma prótese cardíaca?</td>
-                   <br> <td data-id="10"><input name="Possui alguma prótese cardíaca?" id="chkSelecionaInsere9" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                      <td data-id="10"><input name="Possui alguma prótese cardíaca?" id="chkSelecionaExcluir9" type="radio" value="Não" required/>&nbsp;Não</td>
+                    <td>Há algo que mais te incomada?</td>
+                   <br> <td data-id="10"><input name="Há algo que mais te incomoda?" id="chkSelecionaInsere9" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                      <td data-id="10"><input name="Há algo que mais te incomoda?" id="chkSelecionaExcluir9" type="radio" value="Não" required/>&nbsp;Não</td>
+                      <br><label for="text">Se Sim, me conte.</label>
+                <input type="text" id="text" name="Se Sim, me conte.">
                       </tr> 
                     </div> <br>
                       <div class="input-group"> 
                       <tr role="row" data-row-index="0">
-                        <td>É diabético?</td>
+                        <td>Levanta de madrugada para urinar?</td>
                        <br> <td data-id="11"><input name="É diabético?" id="chkSelecionaInsere10" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
                           <td data-id="11"><input name="É diabético?" id="chkSelecionaExcluir10" type="radio" value="Não" required/>&nbsp;Não</td>
+                          <br><label for="text">Se Sim, quantas vezes?</label>
+                <input type="text" id="text" name="Se Sim, me conte.">
                           </tr>
                         </div> <br>
                           <div class="input-group"> 
                           <tr role="row" data-row-index="0">
-                            <td>Tem convulsões ou eplepcia?</td>
+                            <td>O Aspecto das fezes e urina está bem?</td>
                           </tr>
-                           <br> <td data-id="12"><input name="Tem convulsões ou eplepcia?" id="chkSelecionaInsere11" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                              <td data-id="12"><input name="Tem convulsões ou eplepcia?" id="chkSelecionaExcluir11" type="radio" value="Não" required/>&nbsp;nao</td>
-                              <br><label for="text">Se Sim, Qual?</label>
-                            <input type="text" id="text" name="Se Sim, Convulsões ou Eplepcia?" placeholder="Convulsões ou Eplepcia?">
+                           <br> <td data-id="12"><input name="O Aspecto das fezes e urina está bem?" id="chkSelecionaInsere11" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                              <td data-id="12"><input name="O Aspecto das fezes e urina está bem?" id="chkSelecionaExcluir11" type="radio" value="Não" required/>&nbsp;nao</td>
+                              <br><label for="text">Se Não, Conte-me o aspecto.</label>
+                            <input type="text" id="text" name="Se Não, Conte-me o aspecto?" >
                           </tr>
                         </div> <br>
                           <div class="input-group"> 
                           <tr role="row" data-row-index="0">
-                            <td>Tem alguma disfunção renal?</td>
+                            <td>Faz exercícios físicos?</td>
                           </tr>
-                           <br> <td data-id="13"><input name="Tem alguma disfunção renal?" id="chkSelecionaInsere12" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                              <td data-id="13"><input name="Tem alguma disfunção renal?" id="chkSelecionaExcluir12" type="radio" value="Não" required/>&nbsp;Não</td>
-                              <br><label for="text">Se Sim, Qual?</label>
-                            <input type="text" id="text" name="Se Sim, qual disfunção renal?">
-                          </tr>
-                        </div> <br>
-                          <div class="input-group"> 
-                          <td>Tem problemas de coagulação sanguínea?</td>
-                       <br> <td data-id="14"><input name="Tem problemas de coagulação sanguínea?" id="chkSelecionaInsere13" type="radio" value="SIm"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                          <td data-id="14"><input name="Tem problemas de coagulação sanguínea?" id="chkSelecionaExcluir13" type="radio" value="Não" required/>&nbsp;Não</td>
+                           <br> <td data-id="13"><input name="Faz exercícios físicos?" id="chkSelecionaInsere12" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                              <td data-id="13"><input name="Faz exercícios físicos?" id="chkSelecionaExcluir12" type="radio" value="Não" required/>&nbsp;Não</td>
+                              <br><label for="text">Se Sim, Quais?</label>
+                            <input type="text" id="text" name="Se Sim, quais?">
                           </tr>
                         </div> <br>
                           <div class="input-group"> 
-                          <td>Está grávida ou lactante?</td>
+                          <td>Faz parte de algum grupo religioso?</td>
+                       <br> <td data-id="14"><input name="Faz parte de algum grupo religioso?" id="chkSelecionaInsere13" type="radio" value="SIm"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                          <td data-id="14"><input name="Faz parte de algum grupo religioso?" id="chkSelecionaExcluir13" type="radio" value="Não" required/>&nbsp;Não</td>
                           </tr>
-                           <br> <td data-id="15"><input name="Está Grávida ou Lactante?" id="chkSelecionaInsere14" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
-                              <td data-id="15"><input name="Está Grávida ou Lactante?" id="chkSelecionaExcluir14" type="radio" value="Não" required/>&nbsp;Não</td>
-                              <br><label for="text">Se Sim, Qual?</label>
-                            <input type="text" id="text" name="Se Sim, Grávida ou Lactante?" placeholder="Grávida ou Lactante?">
+                        </div> <br>
+                          <div class="input-group"> 
+                          <td>Tem algo que gostaria de mudar?</td>
+                          </tr>
+                           <br> <td data-id="15"><input name="Tem algo que gostaria de mudar?" id="chkSelecionaInsere14" type="radio" value="Sim"/>&nbsp;Sim</td>&nbsp;&nbsp;<br>
+                              <td data-id="15"><input name="Tem algo que gostaria de mudar?" id="chkSelecionaExcluir14" type="radio" value="Não" required/>&nbsp;Não</td>
+                              <br><label for="text">Se Sim, Conte-me?</label>
+                            <input type="text" id="text" name="Se Sim, COnte-me?" >
                           </tr>  
                         </div> <br>                                    
           </tbody>
+
+          <div class="input-group">
+          <label for="name">Qual o seu maior sonho?</label>
+          &nbsp;<input type="text" id="name" name="Qual o seu maior sonho?" required>
+          <br><br>
+          <div class="input-group"><label for="name">Qual a sua realização?</label>
+          &nbsp;<input type="text" id="name" name="Qual a sua realização" required></div><br><br>
+
+          <div class="input-group"> 
+            <label for="mensagem">O que você espera das terapias naturais, o quanto se idenfica com elas, e a sua expectativa para uma mudança de vida? Você quer?</label> <br>
+            <textarea name="O que você está sentindo? id="mensagem" cols="105" rows="10" required ></textarea>
+          </div> <br>
+
+          <button type="submit" class="button">Enviar</button>
           
-          
-          
-          <br>
-          <h1>TERMO DE CONSENTIMENTO LIVRE E ESCLARECIDO</h1>
-          <!--( https://symbl.cc/pt/html-entities/) site de simbolos tipo: . , ; : - () entre outros-->
-          <p>
-          <details>
-          <summary>
-            Os procedimentos de "tratamento em face com toxina batulínica A" e "preenchimento facial com ácido hialurônico" foram explicados pela profissional e eu entendi a natureza e consequência dos mesmos. Os seguintes pontos foram especialmente exclarecidos: <br> <abbr title="click para continuar a leitura"><span style="background-color: green; color: white; font-size: 20px;">Click aqui e continue lendo o Termo</span></abbr></summary>
-          <br>– Apesar da segurança e longa experiência com o uso da toxina batulínica A, alguns efeitos adversos podem ocorrer após a aplicação, como eritema (vermelhidão), pápula (elevação da pele), edema (inchaço), hematoma, inflamação – Apesar da segurança e longa experiência com o uso da toxina batulínica A, alguns efeitos adversos podem ocorrer após a aplicação, como eritema (vermelhidão), pápula (elevação da pele), edema (inchaço), hematoma, inflamação, assimetria, ptose palpebral (caimento ou fechamento anormal da pálpebra). Estes efeitos são transitórios e totalmente reversíveis.
-          – Apesar da segurança e longa experiência com o uso de preenchedores a base de ácido hialurônico, algumas reações adversas podem ocorrer após a aplicação, tais como: eritema (vermelhidão), edema (inchaço), que podem ser associados a prurido (coceira) ou dor localizada. Essas reações são geralmente transitórias e reversíveis. Alguns eventos relatados que podem durar mais tempo como: hematomas (equimoses), endurecimento (o que pode gerar uma sensação de produto palpável), nódulos e discromias (alteração da cor) no local da injeção.
-          –Na literatura também estão descritas as seguintes reações adversas após aplicações de ácido hialurônico: abscesso, granuloma, reação imunológica imediata ou tardia, injeção acidental intravascular (dentro do vaso sanguíneo), podendo obstruir o caso e causar danos nos tecidos.
-          –Pacientes com tendência a desenvolver cicatrizes hipertróficas (quelóides), com hiper sensibilidade (alergia) ao ácido hialurônico, com infecções ou antibióticos, mulheres grávidas ou lactantes e crianças, não devem se submeter aos procedimentos acima descritos.
-          –Atletas devem estar cientes de que o efeito da toxina botulínica é menor.
-          Entendi que a duração dos resultados dos procedimentos é variável, dependendo do metabolismo e hábitos de cada paciente. No caso da toxina botulínica, entendi que os efeitos iniciais são observados em aproximadamente 24‐48 horas e que a duração total também pode ser impactada pela dosagem usada na área tratada, sendo em média 4 a 6 meses.
-          Estou ciente que a prática na área da saúde não é uma ciência exata e reconheço que, apesar de o profissional haver me informado adequadamente sobre as possibilidades de atingir os objetivos dos do procedimento, não se pode afirmar que os resultados são garantidos.
-          Dou meu consentimento para ser fotografado ou filmado antes, durante e depois do procedimento, autorizando o proficional interventor a utilizar minha imagem pessoal de forma gratuita em prontuários clínicos, revistas científicas, apresentações em congressos e eventos científicos, aulas e redes sociais.
-          Entendi que serei atendido por profissionais em treinamento sob supervisão permanente de um professor responsável. Dou fé de não haver omitido ou alterado informações ao expor os meus dados de saúde. <br> <br>
-          
-            </details>
-          </p>
-          <br>
-          <input type="radio" name="opcao" value="Li o termo e autorizo o tratamento" required> &nbsp; Li detalhadamente esse termo de consentimento e entendi totalmente, autorizando o profissional a realizar em mim os procedimentos previamente descritos e explicados. Em prova da conformidade com todo o exposto, assino o presente termo.  
-            <br><br>
-            <input type="radio" name="opcao" value="Li o termo e Revogo o tratamento" required> &nbsp;Revogação do consentimento: &nbsp; Revogo o consentimento prestado no dia <input type="date" class="revogo" name="Data_de_Revogação"> e afirmo que não desejo prosseguir no tratamento que me foi proposto, que dou como finalizado nesta data de <input type="date" class="revogo" name="Data_finalizado">
-          <br> <br>
-          <div>
-          <label for="name">Nome do paciente:</label>
-          &nbsp;<input type="text" id="name" name="Nome do Paciente" required>
-          <br><label for="rg">Identidade n°:</label>
-          <input type="text" id="rg" name="RG" required> <br><br>
-          <label for="date">Data de Hoje:</label>
-          <input type="date" class="revogo" name="Data de hoje" required><br><br>
-          </div>
-          
-            
-              <button type="submit" class="button">Enviar</button>
-            
-          </div>
-              
-              
-              
-            </form>
+      
+
             </body>
-          <br>
+          <br><br>
 </html>

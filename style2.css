@@ -148,6 +148,8 @@ form .input-group label {
   margin-bottom: 5px;
 }
 
+
+
 form .input-group input[type="text"] {
   width: 100%;
   background-color: rgba(165, 235, 206, 0.32);
@@ -369,3 +371,4 @@ input .revogo:hover,
     padding: 0;
   }
 } */
+
