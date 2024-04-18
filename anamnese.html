@@ -41,7 +41,7 @@
             <label for="mensagem">O que você está sentindo?</label> <br>
             <textarea name="O que você está sentindo?" id="mensagem" cols="105" rows="10" required></textarea>
           </div> <br>
-          <h3 style="text-align: center;">Espessão</h3>
+          <br><h3 style="text-align: center;">Espessão:</h3><br><br>
             <div class="input-group">            
               <label for="lingua">Língua:</label><br>
               <input type="text" id="lingua" name="lingua"
@@ -79,7 +79,12 @@
               placeholder="Digite a Pressão Arterial" required>
               
             </div> <br>
-             
+             <div class="input-group">            
+              <label for="blood">Tipo sanguíneo:</label><br>
+              <input type="text" id="blood" name="Tipo sanguíneo"
+              placeholder="Digite o tipo sanguíneo" required>
+              
+            </div> <br>
             <tbody>  
                 <div class="input-group">   
                 <tr role="row" data-row-index="0">
@@ -216,17 +221,32 @@
                         </div> <br>                                    
           </tbody>
 
+          
+            <br><h3>Finalizando:</h3><br><br>
+          
+
           <div class="input-group">
           <label for="name">Qual o seu maior sonho?</label>
-          &nbsp;<input type="text" id="name" name="Qual o seu maior sonho?" required>
+          &nbsp;<input type="text" id="name" name="Qual o seu maior sonho?" placeholder="Digite: Qual o seu maior sonho?" required>
           <br><br>
           <div class="input-group"><label for="name">Qual a sua realização?</label>
-          &nbsp;<input type="text" id="name" name="Qual a sua realização" required></div><br><br>
+          &nbsp;<input type="text" id="name" name="Qual a sua realização" placeholder="Digite: Qual a sua realização" required></div><br><br>
 
           <div class="input-group"> 
-            <label for="text">O que você espera das terapias naturais, o quanto se idenfica com elas, e a sua expectativa para uma mudança de vida? Você quer?</label> <br>
-            <textarea name="O que você espera das terapias naturais...? Você quer?" id="text" cols="105" rows="10" required ></textarea>
+            <label for="text">O que você espera das terapias naturais, o quanto se idenfica com elas, e a sua expectativa para uma mudança de vida?</label> 
+            
           </div> <br>
+            <textarea name="O que você espera das terapias naturais...?" id="text" cols="105" rows="10" placeholder="Digite Aqui:
+O que você espera das terapias naturais..." required ></textarea>
+          </div>
+           <br>
+           <div class="input-group">
+              <label for="quer">Você quer?</label>
+              <select name="Você quer?" id="quer">
+              <option value="selicione">Selecione</option>
+              <option value="SIM">SIM</option>
+              <option value="NAO">NÃO</option>
+             </select> <br><br>
 
           <button type="submit" class="button">Enviar</button>
           

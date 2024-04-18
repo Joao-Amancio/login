@@ -332,6 +332,22 @@ form button:disabled {
     border-radius: 20px;
   }
 }
+
+#profile2 img:nth-child(1) {
+  transform: rotate(-100deg);
+  animation: anim2 4s infinite;
+}
+
+@keyframes anim2 {
+  0%,
+  100% {
+    transform: rotate(-362deg);
+  }
+  50% {
+    transform: rotate(-358deg);
+  }
+}
+
 @media (max-width: 500px) {
   .w50 {
     width: 100%;
