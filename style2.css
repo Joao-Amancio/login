@@ -98,7 +98,7 @@ body {
   z-index: -1;
 }
 
- h3 {
+h3 {
   display: inline-block;
   position: relative;
   text-align: center;
@@ -106,7 +106,6 @@ body {
   margin-top: -100px;
   color: green;
   text-shadow: 7px 7px 7px gray;
-  
 }
 
 .form-box2 .cro {
@@ -367,8 +366,8 @@ input .revogo:hover,
 }
 
 form .input-group select {
-  width: 40%;
-  height: 55px;
+  width: 50%;
+  height: 50px;
   background-color: rgba(27, 190, 127, 0.555);
   border-radius: 20px;
   outline: none;
