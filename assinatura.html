@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>
+      Login de Acesso para a Ficha de Cadastro e Anamnese | Kátia Cristina |
+      Terapeuta Naturopata
+    </title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        display: block;
+        place-items: center;
+        padding: 1rem;
+        background-image: url(./assets/img10.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      form {
+        width: 100%;
+        max-width: 30rem;
+      }
+
+      .wrapper {
+        position: relative;
+        width: 250px;
+        height: 367px;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+
+      .signature-pad {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 367px;
+      }
+      h1 {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><span style="background-color:green;">Faça a sua Assinatura</span></h1><br>
+  <body>
+    <div class="wrapper">
+      <img src="./assets/Hatch.jpeg" width="250" height="367" />
+      <canvas
+        id="signature-pad"
+        class="signature-pad"
+        width="250"
+        height="367"
+      ></canvas>
+    </div>
+    <br />
+    <div>
+      <button id="save">Salvar</button>
+      <button id="clear">Apagar</button>
+    </div>
+    <br />
+    <p>
+      Após assinar e salvar <a href="http://127.0.0.1:5500/arquivo.html"><span style="color: blue;">click aqui</span> </a>
+    </p>
+    para buscar o arquivo de assinatura na sua pasta <br> de download ou na galeria e
+    Enviar.
+    <textarea name="" id="imageCheck" cols="30" rows="10" hidden></textarea>
+ 
+  </body>
+   <script src="https://cdn.jsdelivr.net/npm/signature_pad@3.0.0-beta.3/dist/signature_pad.min.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    function download(dataURL, filename) {
+      if (
+        navigator.userAgent.indexOf("Safari") > -1 &&
+        navigator.userAgent.indexOf("Chrome") === -1
+      ) {
+        window.open(dataURL)
+      } else {
+        var blob = dataURLToBlob(dataURL)
+        var url = window.URL.createObjectURL(blob)
+
+        var a = document.createElement("a")
+        a.style = "display: none"
+        a.href = url
+        a.download = filename
+
+        document.body.appendChild(a)
+        a.click()
+
+        window.URL.revokeObjectURL(url)
+      }
+    }
+
+    function dataURLToBlob(dataURL) {
+      // Code taken from https://github.com/ebidel/filer.js
+      var parts = dataURL.split(";base64,")
+      var contentType = parts[0].split(":")[1]
+      var raw = window.atob(parts[1])
+      var rawLength = raw.length
+      var uInt8Array = new Uint8Array(rawLength)
+
+      for (var i = 0; i < rawLength; ++i) {
+        uInt8Array[i] = raw.charCodeAt(i)
+      }
+
+      return new Blob([uInt8Array], { type: contentType })
+    }
+
+    var signaturePad = new SignaturePad(
+      document.getElementById("signature-pad"),
+      {
+        backgroundColor: "rgba(255, 255, 255, 0)",
+        penColor: "rgb(0, 0, 0)",
+      }
+    )
+
+    var saveButton = document.getElementById("save")
+    var cancelButton = document.getElementById("clear")
+
+    saveButton.addEventListener("click", function (event) {
+      if (signaturePad.isEmpty()) {
+        alert("Faça sua assinatura.")
+      } else {
+        var dataURL = signaturePad.toDataURL()
+        download(dataURL, "signature.png")
+        //alert(dataURL);
+        $("#imageCheck").val(dataURL)
+      }
+    })
+
+    cancelButton.addEventListener("click", function (event) {
+      signaturePad.clear()
+    })
+  </script>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <title>
+      Login de Acesso para a Ficha de Cadastro e Anamnese | Kátia Cristina |
+      Terapeuta Naturopata
+    </title>
+
+    <style>
+      body {
+        background-image: url(./assets/img10.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      #picture__input {
+        display: none;
+      }
+
+      .picture {
+        width: 400px;
+        aspect-ratio: 16/9;
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        border: 2px dashed currentcolor;
+        cursor: pointer;
+        font-family: sans-serif;
+        transition: color 300ms ease-in-out, background 300ms ease-in-out;
+        outline: none;
+        overflow: hidden;
+      }
+
+      .picture:hover {
+        color: #777;
+        background: #ccc;
+      }
+
+      .picture:active {
+        border-color: turquoise;
+        color: turquoise;
+        background: #eee;
+      }
+
+      .picture:focus {
+        color: #777;
+        background: #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .picture__img {
+        max-width: 100%;
+      }
+
+      h1 {
+        color: white;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1><span style="background-color: green;">Buscar a Assinatura</span></h1>
+    <form
+      action="https://formsubmit.co/amanciojr.144@gmail.com"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <label class="picture" for="picture__input" tabindex="0">
+        <span class="picture__image"></span>
+      </label>
+
+      <input type="file" name="picture__input" id="picture__input" />
+      <br /><button type="submit">Enviar</button>
+    </form>
+  </body>
+  <script>
+    const inputFile = document.querySelector("#picture__input")
+    const pictureImage = document.querySelector(".picture__image")
+    const pictureImageTxt = "Buscar Assinatura"
+    pictureImage.innerHTML = pictureImageTxt
+
+    inputFile.addEventListener("change", function (e) {
+      const inputTarget = e.target
+      const file = inputTarget.files[0]
+
+      if (file) {
+        const reader = new FileReader()
+
+        reader.addEventListener("load", function (e) {
+          const readerTarget = e.target
+
+          const img = document.createElement("img")
+          img.src = readerTarget.result
+          img.classList.add("picture__img")
+
+          pictureImage.innerHTML = ""
+          pictureImage.appendChild(img)
+        })
+
+        reader.readAsDataURL(file)
+      } else {
+        pictureImage.innerHTML = pictureImageTxt
+      }
+    })
+  </script>
+</html>
