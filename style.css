@@ -12,16 +12,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  min-height: 100vh;
 }
 
 body {
-  background: url(./assets/img10.png) center center no-repeat fixed;
+  background: var(--bg-url) no-repeat top center/cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+:root {
+  --bg-url: url(./assets/img10-mobile.png);
 }
 
 #profile {
@@ -70,8 +72,8 @@ body {
 .img-box img {
   position: fixed;
   width: 30%;
-  top: 40px;
-  left: 220px;
+  top: 52px;
+  left: 250px;
   margin-bottom: 110%;
   border-radius: 70px;
 }
@@ -352,5 +354,11 @@ form button:disabled {
   .w50 {
     width: 100%;
     padding: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/img10-desktop.png);
   }
 }

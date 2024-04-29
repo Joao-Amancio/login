@@ -14,16 +14,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  min-height: 100vh;
 }
 
 body {
-  background: url(./assets/img10.png) center center no-repeat fixed;
+  background: var(--bg-url) no-repeat top center/cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+:root {
+  --bg-url: url(./assets/img10-mobile.png);
 }
 
 #profile {
@@ -73,8 +75,8 @@ body {
 .img-box img {
   position: fixed;
   width: 30%;
-  padding-top: 1px;
-  left: 220px;
+  padding-top: 30px;
+  left: 250px;
   margin-bottom: 110%;
   border-radius: 70px;
 }
@@ -392,6 +394,11 @@ form .input-group select {
   .img-box {
     display: none;
   }
+
+  .img2 .borboleta {
+    display: none;
+  }
+
   .box {
     width: 700px;
   }
@@ -400,6 +407,13 @@ form .input-group select {
     border-radius: 20px;
   }
 }
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/img10-desktop.png);
+  }
+}
+
 /*
 @media (max-width: 500px) {
   .w50 {
